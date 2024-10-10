@@ -1,0 +1,40 @@
+@keyframes headerEaseIn{
+  from{transform: translateY(-6dvh); letter-spacing: -1dvw;}
+  to{}
+}
+
+#content {
+    padding: 50px;
+    margin-bottom: 10px;
+    border: solid 5px var(--primary);
+    background-color: #DDD8C4;
+  }
+
+div#content{
+  border: dashed 10px;
+}
+
+h1#header {
+  color: var(--primary);
+  font-size: 15dvw;
+  text-align: center;
+  padding-bottom: 10dvh;
+  padding-top: 6dvh;
+  animation-name: headerEaseIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  }
+
+p{
+  text-indent: 10px;
+}
+
+a{
+  color: rgb(40, 86, 184);
+  text-decoration: none;
+}
+
+span#favcolor{
+  color: rgb(255, 30, 150) ;
+  text-decoration: solid;
+}
