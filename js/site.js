@@ -6,16 +6,22 @@
 
 // Functions
 
-// this is an example function and this comment tells what it doees and what parameters are passed to it.
+// this is an example function and this comment tells what it does and what parameters are passed to it.
 function myFunction(param1, param2) {
   // some code here
   // return results;
 }
 
-function main() {
-  console.log("Main function started.");
+function getMainImageHeight() {
+  //var image = document.getElementById('main-photo');
+  //var intro = document.getElementById('intro');
+
+  //intro.stlye.height = image.height;
+
+  console.log('testing 123');
+  //console.log(intro);
   // the code that makes everything happen
 }
 
 // let's get this party started
-main();
+window.onload = getMainImageHeight();
