@@ -10,7 +10,7 @@
 
 /* we can select an html element tag, in this case "body" will apply to the whole document */
 body {
-  background-image: url(../img/brownwood.png);
+  background-image: url('../img/brownwood.png');
   background-position-y: center;
   background-size: 50%;
   margin-left: 4px;
