@@ -13,15 +13,15 @@ body {
   background-image: url('../img/brownwood.png');
   background-position-y: center;
   background-size: 50%;
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 /* the hashtag in a CSS selector selects an element by id, e.g., id="content" */
 .content {
   padding: 50px;
-  padding-top: 0px;
-  margin: 1%;
+  padding-top: 20px;
+  
   margin-bottom: 2%;
   border: solid 5px var(--primary);
   background-color: var(--secondary);
@@ -33,6 +33,10 @@ body {
   margin-bottom: 10px;
   border: solid 0px #888;
   
+}
+
+.site-links{
+  padding: 50px;
 }
 
 /*---Text Rules---*/

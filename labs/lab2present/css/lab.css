@@ -1,10 +1,7 @@
 /*CSS for lab2present*/
 
-.content {
+.site-links {
   padding: 50px;
-  margin-bottom: 10px;
-  border: solid 5px var(--primary);
-  background-color: var(--secondary);
 }
 
 div.content {

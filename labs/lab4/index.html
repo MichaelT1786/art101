@@ -10,7 +10,7 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
 	<!-- Include a sitewide CSS file for consistent styling across the site -->
-	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<link rel="stylesheet" type="text/css" href="../../css/site.css">
 	<!-- Lab-specifc CSS file for any special styling of this particular page -->
 	<link rel="stylesheet" type="text/css" href="css/lab.css">
 	
@@ -21,32 +21,119 @@
 </head>
 <body>
 	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
-	<main id="content">
+	<main class="content">
 		<section>
-			<h1>Lab X - Subject/Topic</h1>
-			<div class="minor-section">
-					<h2>Challenge</h2>
-					<p>Restate the challenge of the lab here.</p>
-			</div>
-
-			<div class="minor-section">
-					<h2>Problems</h2>
-					<p>What problems arose? How did you solve them? </p>
-			</div>
-
-			<div class="minor-section">
-					<h2>Reflection</h2>
-					<p>Put your reflections about this assignment here. How did it go? What kind of energy did you put into the assignment? </p>
-			</div>
-
-			<div class="minor-section">
+			<h1>Lab 4 - Pseudoding and Planning</h1>
+			<div>
+					
+					<div class="minor-section">
+						<h2>Challenge</h2>
+						<p>Use the ideas of Pseudoding to plan a real world task and how to program 
+							a simple game. 
+						</p>
+				</div>
+	
+				<div class="minor-section">
+						<h2>Problems</h2>
+						<p>The longer I spent trying to pseudocode, the more I realized how much more
+							i needed to specify which made the task feel progessively more daunting.  
+						</p>
+				</div>
+	
+				<div class="minor-section">
+						<h2>Reflection</h2>
+						<p>Constantly going down rabbit holes as ideas got expanded upon further 
+							and further was really fun, and just as time consuming. 
+							Definitely helped me realize just how much actually goes into even
+							something simple. 
+							</p>
+				</div>
+				<div class="minor-section">
 					<h2>Results</h2>
-					<div id="output"></div>
+						<img src="./img/lab4-js-comments.png">
+					<pre><code>
+Game State variable
+	0: player count
+	1: betting
+	2: starting hands
+	3: player turns
+	4: Resolve Dealer
+
+Take player count
+	1-5, max usually 7
+	
+Let player set how much they’re betting
+	Array for player banks
+	W3 Array: https://www.w3schools.com/js/js_arrays.asp
+		Can use “text” to make life a lot easier
+
+Draw 2 cards from a virtual deck for players and dealer
+	Array for player hands
+		Can condense into 1 array if you have a designated “break” value to separate hands in array
+	Array tracking which cards have been drawn
+		Generate number 0-52
+	Check if corresponding spot on deck array is available
+		If false, roll new number
+	When true, add number to player hand array and update deck array
+
+Assign point values to cards
+	Modulo operator my beloved (x % y in js)
+	(0 through 51) % 13 returns 0 thru 12, assign values to 0 thru 12
+	Aces
+		If hand without ace is <= 10, ace is 11, else 1
+		Any duplicate aces 1
+
+Print cards in current player’s hand
+	Reveal dealer’s first card
+	1-10, JQK, ♥♦♣♠
+
+Have players inputs for 
+	First turn
+		Split
+			check if player got 2 cards of the same value
+			If true, give them choice to split
+			If choose, player has 2nd hands made of their starters and draws 1 more card into each
+			Re-split is optional rule, so not gonna do that so I don’t go insane
+			Hand acts like extra player
+		Surrender
+			Remove from the turn order
+			Forfeit half of bet
+	Stand
+		Remove from the turn order
+	Hit
+		Run draw
+		If new hand value > 21, bust
+	Double down
+		Draw & double bet
+		If new hand value > 21, bust
+
+Check if the round is over
+	If not, Wait for confirmation the game has been handed off to the next player
+		Player input
+		Move to next player’s turn
+	Players all either bust, surrender or stand
+		Resolve dealer’s hand (dealer continues drawing until 17+ hand value)
+		If dealer highest value, all players lose
+		If dealer busts, all players win
+	Player has blackjack
+		They win, other players lose
+	Dealer has blackjack
+		All players lose
+
+End game
+	Reset deck tracker
+	Clear hands
+	Update banks
+	Loop back to betting
+					</pre></code>
 			</div>
 		</section>
-		<nav id="links">
-			<!-- Put links to other pages (including the homepage) here. -->
-		</nav>
 	</main>
+	<!--Link Back to Home Page-->
+	<section class="content site-links">
+		<nav id="links">
+			<p><= <a href="../../index.html">Back to Home Page</a></p>
+		</nav>
+	</section>
 </body>
 </html>

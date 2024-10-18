@@ -1,0 +1,30 @@
+@keyframes photo-zoom {
+    from{}
+    to{scale:110%}
+}
+
+.photo-grid {
+    padding-top: 50px;
+    display: grid;
+    gap: 5% 5%;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+
+div img.photo {
+    overflow: hidden;
+}
+img.photo {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    transition: transform .3s, filter .3s ease;
+    filter: brightness(0.7);
+    filter: blur(1px);
+    
+}
+img.photo:hover{
+    transform: scale(1.05);
+    filter: brightness(1);
+    filter: blur(0px);
+}
