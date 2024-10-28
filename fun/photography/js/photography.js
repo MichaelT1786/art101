@@ -2,7 +2,10 @@
 // Author: Michael Thomas
 // Date: 10/27/24
 
-
+/*adds footer
+--first parameter to link to home page
+*/
+addFooter("../../index.html");
 
 /* putting together the photo grid
 -- puts all the wanted images into an array

@@ -2,10 +2,18 @@
 // Author: Your Name
 // Date:
 
-
 function addFooter(homeLink){
-    let linkTitle = ["<= Back to Home Page"]
 
-    document.getElementsByTagName("body")
+    let footer = document.createElement("nav");
+        footer.className = "content site-links";
+        footer.id = "links";
+
+        let link = document.createElement("a");
+            link.href = homeLink;
+            link.textContent = "<= Back to Home Page"
+        footer.appendChild(link);
+        
+
+    document.body.appendChild(footer);
 
 }
