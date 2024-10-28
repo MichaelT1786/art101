@@ -2,6 +2,7 @@
 <html>
 
 <!--logistic guts-->
+
 <head>
 	<!-- This title is used for tabs and bookmarks -->
 	<title>Michael's Cats</title>
@@ -17,18 +18,26 @@
 	<link rel="stylesheet" type="text/css" href="./css/photography.css">
 	<!-- Link to javascript file - DEFER waits until all elements are rendered -->
 
-	<!-- <script type="text/javascript" src="./js/lab.js" DEFER></script> -->
+	<script type="text/javascript" src="./js/photography.js" DEFER></script>
 </head>
 
 <body>
-    <div class="photo-grid content">
-        <img class="photo" src="img/sc-photos/sunset(10-4-2024).jpg">
-        <img class="photo" src="img/sc-photos/nightsky(10-16-2024).jpg">
-        <img class="photo" src="img/sc-photos/sunset(10-4-2024).jpg">
-        <img class="photo" src="img/sc-photos/sunset(10-4-2024).jpg">
-        <img class="photo" src="img/sc-photos/sunset(10-4-2024).jpg">
-        <img class="photo" src="img/sc-photos/sunset(10-4-2024).jpg">
-    </div>
+	<div class = "content">
+		<h1>Collection</h1>
+		<p>Over the course of my time as a UC Santa Cruz student, I've been collecting photos of the world around me. 
+			I particularly enjoy photos that show the mix of infrastructure and nature, but I also love taking photos of anything that strikes a chord with me. 
+			This collection here is the photos I like the most from my growing collection. 
+		</p>
+		
+		<div id = "all-photos" class="photo-grid"></div>
+	</div>
+	
+	<!--Link Back to Home Page-->
+	<section class="content site-links">
+		<nav id="links">
+			<p><= <a href="../../index.html">Back to Home Page</a></p>
+		</nav>
+	</section>	
 </body>
 
 </html>
