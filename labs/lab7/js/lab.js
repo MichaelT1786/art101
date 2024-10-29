@@ -29,28 +29,6 @@ function sortUsername() {
   return sortName;
 }
 
-//inserts an element. currently only using it to add text elements. Rooom to experiment
-//target: html element that is getting the text added into it
-//type: the tag being used (p, h1, etc)
-//text: what text is being added
-function addText(target, type, text) {
-  console.log("target: " + target);
-  console.log("type: " + type);
-  console.log("text: " + text);
-
-  //creates a block based on type
-  let block = document.createElement(type);
-  console.log("block: " + block);
-
-  //adds text to block
-  block.innerText += text;
-
-  //appends block to target
-  target.appendChild(block);
-
-  //returns the added
-  return target.lastChild;
-}
 
 addText(
   document.getElementById("username"), 
