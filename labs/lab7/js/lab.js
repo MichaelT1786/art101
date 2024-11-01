@@ -29,9 +29,4 @@ function sortUsername() {
   return sortName;
 }
 
-
-addText(
-  document.getElementById("username"), 
-  "p", 
-  "Wow, " + sortUsername() + " huh? that's a pretty cool name! "
-);
+$("#username").append("<p>Wow, " + sortUsername() + " huh? That's a pretty cool name!")

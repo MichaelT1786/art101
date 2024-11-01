@@ -14,11 +14,7 @@ addFooter("../../index.html");
 */
 function makeGrid(grid, gridContent) {
     for (let i = 0; i < gridContent.length; i++) {
-        let photo = document.createElement("img");
-                photo.className = "photo";
-                photo.src = gridContent[i];
-
-        grid.appendChild(photo);
+        $(grid).append("<img class='photo' src=" + gridContent[i] + "></img>") 
     }
      
 }
@@ -56,18 +52,4 @@ let mainCollection = [
     "./img/sc-photos/20241012_185542_bwalksignglow.jpg", 
 
 ];
-makeGrid(document.getElementById("all-photos"), mainCollection.sort());
-
-console.log(window.innerWidth);
-
-function checkScreenSize(grid) {
-    if (window.innerWidth <= 500) { //gives mobile only 1 column
-        grid.style.gridTemplateColumns = "auto";
-        grid.style.rowGap = "3%";
-    } else if (window.innerWidth < 1230) {
-        grid.style.gridTemplateColumns = "auto auto auto";
-    } else {
-        grid.style.gridTemplateColumns = "auto auto auto auto auto";
-    }
-};
-let checkScreenInterval = window.setInterval(checkScreenSize(document.getElementById("all-photos")), 100);
+makeGrid($("#all-photos"), mainCollection.sort());
