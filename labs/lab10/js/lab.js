@@ -35,16 +35,17 @@ function randomText() {
 
   //selects a starting point. 
   //-- max is length characters away from the length of the lorem item to ensure you get the full length you rolled
-  let start = Math.floor(Math.random() * (lorem[line].length - length));
+  let start = Math.floor(Math.random() * (lorem[line].replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\s]/g,"").length - length));
   console.log("start: " + start)
 
   //gets the string, filters out any punctuation and spaces, and converts it all to lower case. 
-  let rawText = lorem[line].slice(start, start + length).replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\s]/g,"").toLowerCase();
+  let rawText = lorem[line].replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\s]/g,"").slice(start, start + length).toLowerCase();
   console.log(rawText.charAt(0).toUpperCase());
   rawText.charAt(0).toUpperCase();
   return rawText.charAt(0).toUpperCase() + rawText.slice(1);
 }
 
+//click listener for button
 $("#g-button").click(function(){
   //adds text to output
   $("#output").append("<p>" + randomText() + "!</p>")
