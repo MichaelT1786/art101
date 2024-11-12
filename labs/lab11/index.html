@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Lab 10 - JavaScript For the Web</title>
+	<title>Lab 11 - JavaScript Events and Forms</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
   	<meta charset="UTF-8" />
@@ -26,31 +26,37 @@
 	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
 	<main class="content">
 		<section>
-			<h1>Lab 10 - JavaScript For the Web</h1>
+			<h1>Lab 11 - JavaScript Events and Forms</h1>
 			<div class="minor-section">
 					<h2>Challenge</h2>
-					<p>Use JavaScript to modify the DOM structure of a page by inserting an html tag element.</p>
+					<p>Using jquery, apply a function to what is put into a text field. </p>
 			</div>
 
 			<div class="minor-section">
 					<h2>Problems</h2>
-					<p>My partner had some small problems getting thier button to call the function to generate the random string. 
-						Since the button called on the variable set to the function, not the funciton itself, only one random line would be generated 
-						as the function was only run once to set the variable. Luckily, an easy fix. </p>
+					<p>
+						I had some small silly problems forgetting how .sort()
+						works for my name sorting function, but figured it out with 
+						Chad and Google's help. 
+					</p>
 			</div>
 
 			<div class="minor-section">
 					<h2>Reflection</h2>
-					<p>I've been messing around with JavaScript on my own time, and it turns out I've been doing what I'm prettty sure is DOM manipulation
-						as part of that experimentation, so this was familiar territory for me. Unfortunately, I had plans for more, but didn't give myself
-						enough time to put everything together. </p>
+					<p>
+						I spent a fair amount of time messing around with the sorting 
+						applied to the text field input and adding flavor since the core 
+						of getting a text field input and printing text 
+						is pretty straightforwards. 
+					</p>
 			</div>
 
 			<div class="minor-section">
 					<h2>Results</h2>
-					<button id="g-button">Cast a Spell!</button>
-					<div id="output">
-						<div id="spell"></div>
+					<div id="results">
+						<input type="text" id="username" placeholder="What's your name?">
+						<button id="submit">Submit</button>
+						<div id="output"></div>
 					</div>
 			</div>
 		</section>

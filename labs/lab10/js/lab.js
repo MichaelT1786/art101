@@ -48,7 +48,7 @@ function randomText() {
 //click listener for button
 $("#g-button").click(function(){
   //adds text to output
-  $("#output").append("<p>" + randomText() + "!</p>")
+  $("#spell").html("<p>" + randomText() + "!</p>")
   //gives each spell random underline color
-  $("#output p:last-child").css("text-decoration-color", "rgba(" + (Math.random() * 255) + ", " + (Math.random() * 255) + ", " + (Math.random() * 255) + ", 0.8)");
+  $("#spell p").css("text-decoration-color", "rgba(" + (Math.random() * 255) + ", " + (Math.random() * 255) + ", " + (Math.random() * 255) + ", 0.8)");
 })
