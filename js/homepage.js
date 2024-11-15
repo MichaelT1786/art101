@@ -17,3 +17,22 @@ upCheck(function(){
         //console.log("right");
     }
 });
+
+let labs = [
+    "Getting Started", 
+    "HTML and CSS Starter", 
+    "File Structure and File Transfer", 
+    "Pseudocoding and Problem-Solving", 
+    "Data Types and Variables", 
+    "Arrays and Objects", 
+    "Functions", 
+    "Anon Functions and Callbacks", 
+    "Libraries and jQuery", 
+    "JavaScript For the Web", 
+    "JavaScript Events and Forms", 
+    "Conditionals", 
+]
+
+for (let i=0; i<labs.length; i++){
+    $("#lab-links").append("<tr><td>Lab " + (i+1) + " - <a href='labs/lab" + (i+1) + "/index.html'>" + labs[i] + "</a></td></tr>")
+}
