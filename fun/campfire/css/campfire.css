@@ -1,0 +1,21 @@
+/* Here we can set styles for this lab page that we don't want to effect others pages */
+
+/* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
+body {
+  background-color: rgb(0, 0, 0);
+  background-image: url(../img/stars-isolate.png);
+  background-size: 100%;
+  background-repeat: repeat;
+  background-position-x: var();
+}
+
+img#stars {
+  max-height: 100%;
+  width: normal;
+  zoom: normal;
+  object-fit: none;  
+}
+
+/*div img#stars {
+  
+}
