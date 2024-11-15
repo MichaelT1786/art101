@@ -10,6 +10,6 @@ function addFooter(homeLink){
 //does have to contain a function
 function upCheck(func) {
     $(document).ready(
-        setInterval(func, 10 /* contained function run every 0.01s*/)
+        setInterval(func, 1 /* contained function run every 0.001s*/)
     )
 }

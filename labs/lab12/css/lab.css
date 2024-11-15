@@ -1,0 +1,61 @@
+/* Here we can set styles for this lab page that we don't want to effect others pages */
+
+/* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
+.minor-section {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid 1px #888;
+    background-color: #DDD8C4;
+  }
+
+
+#output div {
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 5px;
+  padding: 10px;
+  
+}
+#output div p {
+  font-weight: bolder;
+  text-align: center;
+  font-size: 70px;
+}
+
+/*--- Gryffindor ---*/
+.grf {
+  background-color: rgb(101, 28, 28);
+  border-color: rgb(247, 191, 37);
+}
+.grf p {
+  color: rgb(247, 191, 37);
+}
+
+/*--- Slytherin ---*/
+.sly {
+  background-color: rgb(17, 82, 40);
+  border-color: rgb(195, 207, 206);
+}
+.sly p {
+  color: rgb(195, 207, 206);
+}
+
+
+/*--- Ravenclaw ---*/
+.rav {
+  background-color: rgb(37, 29, 93);
+  border-color: rgb(162, 165, 168);
+}
+.rav p {
+  color: rgb(162, 165, 168);
+}
+
+
+/*--- Hufflepuff ---*/
+.huf {
+  background-color: rgb(246, 211, 36);
+  border-color: rgb(43, 42, 34);
+}
+.huf p {
+  color: rgb(43, 42, 34);
+}
