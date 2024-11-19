@@ -21,8 +21,10 @@ function makeFizz(fizzName, total, columns, target, cases) {
 
     // var used to store all of the cases for a number
     let output = 0;
-    //array that stores all of the ouputs to be returned at the end
-    let all = []
+    // array that stores all of the ouputs to be returned at the end
+    let all = [];
+    // var that counts how many cases a number has
+    let strength = 0;
 
 
     //creates the table
@@ -50,12 +52,14 @@ function makeFizz(fizzName, total, columns, target, cases) {
     for (let num = 1; num <= total; num++) {
         //resets output for each number
         output = "";
+        strength = 0;
 
         //goes through all cases
         for (i = 0; i < cases.length; i++) {
-            if (Math.ceil((num % cases[i][0]) / cases[i][0]) == 0) { //returns a 0 if the number is divisible by the given number from cases
+            if (num % cases[i][0] == 0) { //returns a 0 if the number is divisible by the given number from cases
                 //adds the corresponding phrase to the output
                 output += cases[i][1];
+                strength++;
             }
         }
         //if none of the cases are true, then output will be blank, so outputs the number
@@ -63,8 +67,9 @@ function makeFizz(fizzName, total, columns, target, cases) {
             output = num;
         }
 
-        // adds output to the current row
-        target.find("[name=" + fizzName).append("<div><p>" + output + "</p></div>");
+        // adds output to the current row & sets the background color based on the number of cases
+        $("[name=" + fizzName).append("<div><p>" + output + "</p></div>");
+        $("[name=" + fizzName + "] div:last-child").css("background-color", "rgba(87, 51, 7, " + 1*(strength/cases.length) + ")")
         //console.log(output);
         //console.log(fizzName + Math.floor(num / columns));
 
