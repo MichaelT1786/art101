@@ -18,6 +18,7 @@ upCheck(function(){
     }
 });
 
+//creates the list of lab links
 let labs = [
     "Getting Started", 
     "HTML and CSS Starter", 
@@ -31,6 +32,7 @@ let labs = [
     "JavaScript For the Web", 
     "JavaScript Events and Forms", 
     "Conditionals", 
+    "Loops"
 ]
 
 for (let i=0; i<labs.length; i++){
