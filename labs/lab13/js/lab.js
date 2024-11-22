@@ -33,17 +33,17 @@ function makeFizz(fizzName, total, columns, target, cases) {
     // console.log(table);
 
     //adds a number of rows based on columns
-    $("[name=" + fizzName).css("grid-template-columns", "repeat(" + columns + ", auto)");
+    $("[name=" + fizzName).css("grid-template-columns", "repeat(" + columns + ", 1fr)");
     // console.log($("[name=" + fizzName))
 
 
     //has the subheader display the range of numbers that the cases are applied to
     $("#title").append(total + ":")
 
-    //adds the list of cases to the results section
-    for (i = 0; i < cases.length; i++) {
-        $("#cases").append("<tr><td><p>" + cases[i][0] + ": " + cases[i][1] + "</p></td></tr>")
-    }
+    // //adds the list of cases to the results section
+    // for (i = 0; i < cases.length; i++) {
+    //     $("#cases").append("<tr><td><p>" + cases[i][0] + ": " + cases[i][1] + "</p></td></tr>")
+    // }
 
 
 //--- Filling the grid

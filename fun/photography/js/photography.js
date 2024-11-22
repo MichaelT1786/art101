@@ -66,14 +66,10 @@ function setGrid(grid, gridContent) {
 //trims duplicates from images that appear in multiple catagories and sorts them to set "all photos" as default
 setGrid($("#all-photos"), [...new Set(photos.flat())].sort());
 
+//constantly updates the number of columns in the grid based on the available width
 upCheck(function () {
-    if ($(window).innerWidth() <= 600) { //phone
-        $("#all-photos").css("grid-template-columns", "auto")
-    } else if ($(window).innerWidth() <= 1100) { //ipad
-        $("#all-photos").css("grid-template-columns", "auto auto auto")
-    } else {
-        $("#all-photos").css("grid-template-columns", "auto auto auto auto auto")
-    }
+    $("#all-photos").css("grid-template-columns", "repeat(" + Math.ceil($("#all-photos").parent().innerWidth()/350) + ", 1fr)")
+    
 })
 
 

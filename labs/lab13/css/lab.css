@@ -35,9 +35,9 @@
   text-overflow: ellipsis;
 }
 /*forces the spaces to be a set width*/
-.fizzTable div {
+/* .fizzTable div {
   width: 130px;
-}
+} */
 /*make alternating children have darker background*/
 .fizzTable div:nth-child(odd){
   background-color: rgba(87, 51, 7, 0.175);

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This title is used for tabs and bookmarks -->
+	<title>Lab 14 - Debugging, Tools & Strategies</title>
+
+	<!-- Use UTF character set, a good idea with any webpage -->
+  	<meta charset="UTF-8" />
+	<!-- Set viewport so page remains consistently scaled w narrow devices -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<!-- Include a sitewide CSS file for consistent styling across the site -->
+	<link rel="stylesheet" type="text/css" href="../../css/site.css">
+	<!-- Lab-specifc CSS file for any special styling of this particular page -->
+	<link rel="stylesheet" type="text/css" href="css/lab.css">
+	
+	<!-- load jQuery library to make javascript easier (must be above our lab js)-->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"></script>
+	<!-- Link to javascript file - DEFER waits until all elements are rendered -->
+	<script type="text/javascript" src="../../js/site.js" DEFER></script>
+	<script type="text/javascript" src="./js/lab.js" DEFER></script>
+</head>
+<body>
+	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
+	<main class="content">
+		<section>
+			<h1>Lab 14 - Debugging, Tools & Strategies</h1>
+			<div class="minor-section">
+					<h2>Challenge</h2>
+					<p>Go back through your site and clean up problems you find. </p>
+			</div>
+
+			<div class="minor-section">
+					<h2>Problems</h2>
+					<p>I didn't run into many problems in fixing my code. The main challenge was just scouring back through everything to find what I could. </p>
+			</div>
+
+			<div class="minor-section">
+					<h2>Reflection</h2>
+					<p>This was a very relaxed lab for me since I didn't have much I had to do, but I'm glad I caught the little things I did. I also helped Chad finish his lab 13</p>
+			</div>
+
+			<div class="minor-section">
+					<h2>Results</h2>
+					<div id="output">
+						<img src="./img/photography-easing.png">
+						<p>
+							This is less of a bug-fix and more just going back and improving some code. Originally, it was a set of if-else conditionals that would hard lock the
+							number of grids to 1, 3, or 5, but this new logic lets the number shift more naturally. upCheck is a fucntion I made that just runs the code you put in 
+							it every millisecond. If there's a better way to have code in JS check repeatedly, let me know. upCheck is a pretty haphazard way. 
+						</p>
+						<img src="./img/lab13-junkcode.png">
+						<p>
+							I forgot to remove some code from when I originally used HTML tables to organize the grid instead of CSS's grid display, which is kind of funny seeing as I 
+							had already used grids to the same effect for my photography page. 
+						</p>
+						<img src="./img/cats-photos.png">
+						<p>
+							Finally got around to actually adding the photos of my cats I've been sitting on for a while now. 
+						</p>
+					</div>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

@@ -32,7 +32,8 @@ let labs = [
     "JavaScript For the Web", 
     "JavaScript Events and Forms", 
     "Conditionals", 
-    "Loops"
+    "Loops", 
+    "Debugging, Tools & Strategies"
 ]
 
 for (let i=0; i<labs.length; i++){
