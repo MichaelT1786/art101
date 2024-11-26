@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Lab 14 - Debugging, Tools & Strategies</title>
+	<title>Lab 15 - AJAX</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
   	<meta charset="UTF-8" />
@@ -26,40 +26,44 @@
 	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
 	<main class="content">
 		<section>
-			<h1>Lab 14 - Debugging, Tools & Strategies</h1>
+			<h1>Lab 15 - AJAX</h1>
 			<div class="minor-section">
 					<h2>Challenge</h2>
-					<p>Go back through your site and clean up problems you find. </p>
+					<p>Interact with an external API</p>
 			</div>
 
 			<div class="minor-section">
 					<h2>Problems</h2>
-					<p>I didn't run into many problems in fixing my code. The main challenge was just scouring back through everything to find what I could. </p>
+					<p>
+						I had some problems keeping track of what I needed to reference from data. I also had some problems getting the cry to play as I had to brute force 
+						document.getElementByID the audio instead of just calling it with jQuery. 
+					</p>
 			</div>
 
 			<div class="minor-section">
 					<h2>Reflection</h2>
-					<p>This was a very relaxed lab for me since I didn't have much I had to do, but I'm glad I caught the little things I did. I also helped Chad finish his lab 12 and 13</p>
+					<p>This was another very fun lab where I got to just mess around with stuff I like. I could always have done more, but I'm proud of what I have. </p>
 			</div>
 
 			<div class="minor-section">
 					<h2>Results</h2>
 					<div id="output">
-						<img src="./img/photography-easing.png">
-						<p>
-							This is less of a bug-fix and more just going back and improving some code. Originally, it was a set of if-else conditionals that would hard lock the
-							number of grids to 1, 3, or 5, but this new logic lets the number shift more naturally. upCheck is a fucntion I made that just runs the code you put in 
-							it every millisecond. If there's a better way to have code in JS check repeatedly, let me know. upCheck is a pretty haphazard way. 
-						</p>
-						<img src="./img/lab13-junkcode.png">
-						<p>
-							I forgot to remove some code from when I originally used HTML tables to organize the grid instead of CSS's grid display, which is kind of funny seeing as I 
-							had already used grids to the same effect for my photography page. 
-						</p>
-						<img src="./img/cats-photos.png">
-						<p>
-							Finally got around to actually adding the photos of my cats I've been sitting on for a while now. 
-						</p>
+						<div id="buttons">
+								<button id="back">Previous</button>
+								<input id="specific" type="text" placeholder="Specific Number">
+								<button id="random">Random</button>
+								<button id="next">Next</button>
+						</div>
+						
+						<audio id="cry" src="" type="audio/ogg"></audio>
+						
+						<h1 id="pokename" class="pokepage"></h1>
+						<img id="pokepic" class="pokepage" src="">
+						<div id="type" class="pokepage">
+								<div id="type1" class=""></div>
+								<div id="type2" class=""></div>
+						</div>
+						
 					</div>
 			</div>
 		</section>

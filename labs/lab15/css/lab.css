@@ -1,0 +1,105 @@
+/* Here we can set styles for this lab page that we don't want to effect others pages */
+
+/* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
+.minor-section {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid 1px #888;
+    background-color: #DDD8C4;
+  }
+
+#buttons{
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  justify-content: center;
+  width: 50%;
+  grid-template-columns: 1fr 0.5fr 1fr 1fr;
+}
+/* #specific{
+  width: 75%;
+} */
+
+#pokepic {
+  display: block;
+  padding-top: -100px;
+  margin-left: auto;
+  margin-right: auto;
+  /* max-width: auto; */
+  width: 96px
+}
+
+#type {
+  padding-top: 2%;
+  padding-bottom: 10%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto auto;
+}
+
+#type div{
+  color: white;
+  font-weight: bold;
+  padding: 7px 14px;
+  margin: 2.5px;
+  border-radius: 5px;
+}
+
+/* all of the background colors */
+#type2.noType{
+  display: none;
+}
+.bug{
+  background-color: rgb(143, 214, 28);
+}
+.dark{
+  background-color: rgb(43, 38, 48);
+}
+.dragon{
+  background-color: rgb(129, 108, 168);
+}
+.electric{
+  background-color: rgb(255, 183, 40);
+}
+.fairy{
+  background-color: #ffc1db;
+}
+.fighting{
+  background-color: rgb(88, 30, 19);
+}
+.fire{
+  background-color: rgb(208, 24, 18);
+}
+.flying{
+  background-color: rgb(132, 218, 255);
+}
+.ghost{
+  background-color: rgb(87, 70, 154);
+}
+.grass{
+  background-color: rgb(33, 129, 35);
+}
+.ground{
+  background-color: rgb(200, 171, 81);
+}
+.ice{
+  background-color: rgb(176, 231, 239);
+}
+.normal{
+  background-color: rgb(195, 189, 196);
+}
+.poison{
+  background-color: rgb(120, 61, 138);
+}
+.psychic{
+  background-color: rgb(237, 60, 172);
+}
+.rock{
+  background-color: rgb(129, 98, 60);
+}
+.steel{
+  background-color: rgb(175, 177, 179);
+}
+.water{
+  background-color: rgb(54, 127, 204);
+}
