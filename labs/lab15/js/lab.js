@@ -111,10 +111,11 @@ $("#back").click(function(){
     }
 });
 $("#next").click(function(){getPokemon(((shownMon) % 1025) + 1)});
-$("#specific").on('keypress', function(e){
-    //if enter key is pressed, loads the specified mon & clears the textbox
-    if(e.which === 13){
-        getPokemon($("#specific").val());
-        $("#specific").val("");
-    }
+    //if enter key is pressed, loads the specified mon & clears the textbox. 
+    //Structure borrowed from https://stackoverflow.com/questions/6524288/jquery-event-for-user-pressing-enter-in-a-textbox#:~:text=You%20can%20wire%20up%20your%20own%20custom%20event
+    $("#specific").on('keypress', function(e){
+        if(e.which === 13){
+            getPokemon($("#specific").val());
+            $("#specific").val("");
+        }
 })

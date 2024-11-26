@@ -34,7 +34,7 @@ let labs = [
     "Conditionals", 
     "Loops", 
     "Debugging, Tools & Strategies", 
-    "AJAX"
+    "AJAX", 
 ]
 
 for (let i=0; i<labs.length; i++){
