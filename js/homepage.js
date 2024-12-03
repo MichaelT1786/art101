@@ -35,7 +35,7 @@ let labs = [
     "Loops", 
     "Debugging, Tools & Strategies", 
     "AJAX", 
-    "JSON & APIs"
+    "JSON & APIs", 
 ]
 
 for (let i=0; i<labs.length; i++){
