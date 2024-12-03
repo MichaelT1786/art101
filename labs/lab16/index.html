@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Lab X - Subject/Topic</title>
+	<title>Lab 16 - JSON & APIs</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
   	<meta charset="UTF-8" />
@@ -26,25 +26,47 @@
 	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
 	<main class="content">
 		<section>
-			<h1>Lab X - Subject/Topic</h1>
+			<h1>Lab 16 - JSON & APIs</h1>
 			<div class="minor-section">
 					<h2>Challenge</h2>
-					<p>Restate the challenge of the lab here.</p>
+					<p>Use another API</p>
 			</div>
 
 			<div class="minor-section">
 					<h2>Problems</h2>
-					<p>What problems arose? How did you solve them? </p>
+					<p>
+						It seems like everyone had this problem, but the XKCD API has some problems with CORS that keep us from using it, so we went ahead and used a different API, 
+						choosing the EPIC API from NASA. 
+							<br><br>
+						Of course the API doesn't return a usable link for the image src, so we had to manually reformat the date into something usable and frankenstein a usable 
+						link. Luckily, the rest of the data was easy to extract and make useful! 
+					</p>
 			</div>
 
 			<div class="minor-section">
 					<h2>Reflection</h2>
-					<p>Put your reflections about this assignment here. How did it go? What kind of energy did you put into the assignment? </p>
+					<p>
+						Although we struggled a lot with this lab, a lot of our problems arose from things no one in the class was able to solve, not even Ilia, so I don't feel 
+						at all bad for getting stuck on the XKCD API. Having to brute force the SRC link was honestly kind of fun, but should have been a problem NASA addressed 
+						when making the API as it's an annoying barrier. 
+					</p>
 			</div>
 
 			<div class="minor-section">
 					<h2>Results</h2>
-					<div id="output"></div>
+					<div id="output">
+						<h1 id="date"></h1>
+						<img id="pic" src="">
+						<table id="coords">
+							<tr>
+								<!-- latitude -->
+								<td><p></p></td>
+								<!-- longitude -->
+								<td><p></p></td>
+							</tr>
+						</table>
+						<p id="caption"></p>
+					</div>
 			</div>
 		</section>
 	</main>

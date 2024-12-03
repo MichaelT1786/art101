@@ -75,7 +75,20 @@ function getPokemon(num){$.ajax({
         }
         
         //capitalizes first letter of the name and print it
-        $("#pokename").html(data.name.charAt(0).toUpperCase()+data.name.slice(1));
+        let nameSplit = data.name.split("");
+        nameSplit[0] = nameSplit[0].toUpperCase();
+        for(i=0; i<nameSplit.length; i++){
+            if (nameSplit[i] == "-"){
+                if (data.name == "wo-chien" || data.name == "chien-pao" || data.name == "ting-lu" || data.name == "chi-yu"){
+                    
+                } else {
+                    nameSplit[i] = " ";
+                }
+                
+                nameSplit[i+1] = nameSplit[i+1].toUpperCase()
+            }
+        }
+        $("#pokename").html(nameSplit.join(""));
         
         //set types & print
         $("#type div").attr("class", "")
@@ -111,11 +124,19 @@ $("#back").click(function(){
     }
 });
 $("#next").click(function(){getPokemon(((shownMon) % 1025) + 1)});
-    //if enter key is pressed, loads the specified mon & clears the textbox. 
-    //Structure borrowed from https://stackoverflow.com/questions/6524288/jquery-event-for-user-pressing-enter-in-a-textbox#:~:text=You%20can%20wire%20up%20your%20own%20custom%20event
-    $("#specific").on('keypress', function(e){
-        if(e.which === 13){
-            getPokemon($("#specific").val());
-            $("#specific").val("");
+    
+//if enter key is pressed, loads the specified mon & clears the textbox. 
+//Structure borrowed from https://stackoverflow.com/questions/6524288/jquery-event-for-user-pressing-enter-in-a-textbox#:~:text=You%20can%20wire%20up%20your%20own%20custom%20event
+$("#specific").on('keypress', function(e){
+    if(e.which === 13){
+        let searchName = $("#specific").val().toLowerCase().split("");
+        for(i=0; i<searchName.length; i++){
+            if (searchName[i] == " "){
+                searchName[i] = "-";
+            }
         }
+        getPokemon(searchName.join(""));
+        $("#specific").val("");
+    };
 })
+

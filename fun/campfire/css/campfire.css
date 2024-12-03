@@ -1,7 +1,7 @@
 /* Here we can set styles for this lab page that we don't want to effect others pages */
 
 /* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
-body {
+/* body {
   background-color: rgb(0, 0, 0);
   background-image: url(../img/stars-isolate.png);
   background-size: 100%;
@@ -18,4 +18,24 @@ img#stars {
 
 /*div img#stars {
   
+} */
+
+@font-face {
+  font-family: Cubist;
+  src: url('Dklouise-pyWv.otf');
+}
+
+div{
+  max-width: 5in;
+  background-color: gray;
+}
+
+p {
+  font-family: Cubist;
+  font-size: 0.4in;
+  text-align: center;
+}
+
+p span {
+  color: white;
 }
