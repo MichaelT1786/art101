@@ -11,7 +11,7 @@
 //--- Guts ---//
 
 //lets you access the Three.js stuff by using THREE
-import * as THREE from "https://code.jquery.com/jquery-3.6.4.min.js";
+import * as THREE from "three";
 console.log(THREE);
 
 //makes scene
